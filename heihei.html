@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>傻子</title>
+    <style>
+        html,body{
+            background: black;
+        }
+        .outer{
+            transform-style: preserve-3d;
+            position: absolute;
+            top: 300px;
+            left: 300px;
+            transform: rotateX(30deg) rotateY(30deg);
+            width: 300px;
+            height: 300px;
+            transition: all 2s;
+        }
+        .item{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            opacity: 0.5;
+            box-shadow: 0 0 30px white;
+        }
+        .a{
+            background: red;
+            transform: translateZ(150px);
+        }
+        .b{
+            background: green;
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        .b1{
+            background: green;
+            transform: rotateX(90deg) translateZ(75px);
+        }
+        .b2{
+            background: green;
+            transform: rotateX(90deg) translateZ(-75px);
+        }
+        .b3{
+            background: green;
+            transform: rotateX(90deg);
+        }
+        .c{
+            background: yellow;
+            transform: rotateX(90deg) translateZ(-150px);
+        }
+        .d{
+            background: blue;
+            transform: rotateY(90deg) translateZ(150px);
+        }
+        .d1{
+            background: blue;
+            transform: rotateY(90deg);
+        }
+        .d2{
+            background: blue;
+            transform: rotateY(90deg) translateZ(-75px);
+        }
+        .d3{
+            background: blue;
+            transform: rotateY(90deg) translateZ(75px);
+        }
+        .e{
+            background: deeppink;
+            transform: rotateY(90deg) translateZ(-150px);
+        }
+        .f{
+            background: darkmagenta;
+            transform: translateZ(-150px);
+        }
+        .g{
+            background: darkmagenta;
+            transform: translateZ(-75px);
+        }
+        .h{
+            background: darkmagenta;
+            transform: translateZ(150px);
+        }
+        .i{
+            background: darkmagenta;
+            transform: translateZ(-150px);
+        }
+        .outer:hover{
+            transform: rotateX(330deg) rotateY(330deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="a item"></div>
+        <div class="b item"></div>
+        <!--<div class="b1 item"></div>-->
+        <!--<div class="b2 item"></div>-->
+        <!--<div class="b3 item"></div>-->
+        <div class="c item"></div>
+        <div class="d item"></div>
+        <!--<div class="d1 item"></div>-->
+        <!--<div class="d2 item"></div>-->
+        <!--<div class="d3 item"></div>-->
+        <div class="e item"></div>
+        <div class="f item"></div>
+        <!--<div class="g item"></div>-->
+        <!--<div class="h item"></div>-->
+        <!--<div class="i item"></div>-->
+    </div>
+</body>
+</html>
