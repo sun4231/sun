@@ -9,103 +9,118 @@
         }
         .outer{
             transform-style: preserve-3d;
+            width: 500px;
+            height: 500px;
             position: absolute;
-            top: 300px;
-            left: 300px;
-            transform: rotateX(30deg) rotateY(30deg);
-            width: 300px;
-            height: 300px;
-            transition: all 2s;
+            left: 500px;
+            top: 200px;
+            transform: rotateY(30deg) rotateZ(30deg);
+            transition: all 30s;
+            animation: moveRight 10s 10 forwards;
+            animation-timing-function: cubic-bezier(.1,-1.68,.4,-1.93);
+        }
+        @keyframes moveRight {
+            0%{
+                left: 500px;
+                top: 200px;
+            }
+            50%{
+                left: 700px;
+                top: 200px;
+                transform: rotateY(180deg) rotateZ(180deg);
+            }
+            100%{
+                left: 500px;
+                top: 200px;
+            }
         }
         .item{
+            width: 500px;
+            height: 500px;
             position: absolute;
-            width: 300px;
-            height: 300px;
             opacity: 0.5;
-            box-shadow: 0 0 30px white;
+            box-shadow:  0 0 50px red;
         }
+
         .a{
             background: red;
-            transform: translateZ(150px);
         }
         .b{
             background: green;
-            transform: rotateX(90deg) translateZ(150px);
-        }
-        .b1{
-            background: green;
-            transform: rotateX(90deg) translateZ(75px);
-        }
-        .b2{
-            background: green;
-            transform: rotateX(90deg) translateZ(-75px);
-        }
-        .b3{
-            background: green;
-            transform: rotateX(90deg);
+            transform: rotateX(90deg) translateY(250px) translateZ(250px);
         }
         .c{
-            background: yellow;
-            transform: rotateX(90deg) translateZ(-150px);
+            background: deeppink;
+            transform: rotateX(90deg) translateY(250px) translateZ(-250px);
         }
         .d{
-            background: blue;
-            transform: rotateY(90deg) translateZ(150px);
-        }
-        .d1{
-            background: blue;
-            transform: rotateY(90deg);
-        }
-        .d2{
-            background: blue;
-            transform: rotateY(90deg) translateZ(-75px);
-        }
-        .d3{
-            background: blue;
-            transform: rotateY(90deg) translateZ(75px);
+            background: yellow;
+            transform: rotateY(90deg) translateX(-250px) translateZ(250px);
         }
         .e{
-            background: deeppink;
-            transform: rotateY(90deg) translateZ(-150px);
+            background: blue;
+            transform: rotateY(90deg) translateX(-250px) translateZ(-250px);
         }
         .f{
             background: darkmagenta;
-            transform: translateZ(-150px);
-        }
-        .g{
-            background: darkmagenta;
-            transform: translateZ(-75px);
-        }
-        .h{
-            background: darkmagenta;
-            transform: translateZ(150px);
-        }
-        .i{
-            background: darkmagenta;
-            transform: translateZ(-150px);
+            transform: translateZ(500px);
         }
         .outer:hover{
-            transform: rotateX(330deg) rotateY(330deg);
+            transform: rotateY(3200deg) rotateZ(3200deg);
+        }
+
+
+        .item1{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            opacity: 0.5;
+            left: 150px;
+            top: 150px;
+            box-shadow:  0 0 50px black;
+        }
+
+        .a1{
+            background: red;
+            transform: translateZ(150px);
+        }
+        .b1{
+            background: green;
+            transform: rotateX(90deg) translateY(250px) translateZ(100px);
+        }
+        .c1{
+            background: deeppink;
+            transform: rotateX(90deg) translateY(250px) translateZ(-100px);
+        }
+        .d1{
+            background: yellow;
+            transform: rotateY(90deg) translateX(-250px) translateZ(100px);
+        }
+        .e1{
+            background: blue;
+            transform: rotateY(90deg) translateX(-250px) translateZ(-100px);
+        }
+        .f1{
+            background: darkmagenta;
+            transform: translateZ(350px);
         }
     </style>
 </head>
 <body>
-    <div class="outer">
-        <div class="a item"></div>
-        <div class="b item"></div>
-        <!--<div class="b1 item"></div>-->
-        <!--<div class="b2 item"></div>-->
-        <!--<div class="b3 item"></div>-->
-        <div class="c item"></div>
-        <div class="d item"></div>
-        <!--<div class="d1 item"></div>-->
-        <!--<div class="d2 item"></div>-->
-        <!--<div class="d3 item"></div>-->
-        <div class="e item"></div>
-        <div class="f item"></div>
-        <!--<div class="g item"></div>-->
-        <!--<div class="h item"></div>-->
-        <!--<div class="i item"></div>-->
-    </div>
+<div class="outer">
+    <div class="item a"></div>
+    <div class="item b"></div>
+    <div class="item c"></div>
+    <div class="item d"></div>
+    <div class="item e"></div>
+    <div class="item f"></div>
+
+    <div class="item1 a1"></div>
+    <div class="item1 b1"></div>
+    <div class="item1 c1"></div>
+    <div class="item1 d1"></div>
+    <div class="item1 e1"></div>
+    <div class="item1 f1"></div>
+</div>
 </body>
 </html>
